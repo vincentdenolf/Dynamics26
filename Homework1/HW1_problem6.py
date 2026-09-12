@@ -1,6 +1,6 @@
 
 # TO RUN
-#
+# python .\HW1_problem6.py
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -22,6 +22,7 @@ DY = yDot(X,Y)
 
 # create system to plot phase space trajectories
 # takes in time and v = (x,y) vector
+# time needed for solveivp function
 def ODE_system(t, v):
     x, y = v
     return [xDot(x,y), yDot(x,y)]
@@ -42,6 +43,7 @@ for i in range(len(v0)):
     x = solutions.y[0]
     y = solutions.y[1]
     #arrIndicies = np.linspace(1, len(x)-2, 100, dtype = int)
+    # for adding arrows
     arrowIndex= 1
     dx = x[arrowIndex+1] - x[arrowIndex]
     dy = y[arrowIndex+1] - y[arrowIndex]
