@@ -1,6 +1,6 @@
 
-# TO RUN
-# python .\HW1_problem6.py
+## TO RUN
+## python .\HW1_problem6.py
 
 import numpy as np
 import matplotlib.pyplot as plt
