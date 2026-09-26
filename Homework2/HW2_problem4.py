@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import scipy.integrate as integrate
 from scipy.integrate import simpson
 
+## TO RUN
+## python .\HW2_problem4.py
+
 # function to evaluate operator on function f
 def T(f,lambd,x):
     integral = np.zeros_like(x)
@@ -32,7 +35,7 @@ for k in range(1,21):
     applications.append(Tk.copy())
 
 plt.figure()
-# enumterate through functions and keep track of index
+# enumerate through functions and keep track of index
 for k,func in enumerate(applications, start = 0):
     print("plotting eval ", k)
     plt.plot(x,func, alpha = 0.8, label = f"T^{k}(f)")
