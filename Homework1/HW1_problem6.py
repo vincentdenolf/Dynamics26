@@ -8,8 +8,8 @@ import random
 from scipy.integrate import solve_ivp
 
 # define given system 
-xDot = lambda x,y: -y+x * (1 - x**2 - y**2)
-yDot = lambda x,y: x+y * (1 - x**2 - y**2)
+xDot = lambda x,y: x-np.sqrt(x**2+y**2)*(x+y) + x*y
+yDot = lambda x,y: y+np.sqrt(x**2+y**2)*(x-y) - x**2
 
 # create grid to plot on
 x = np.linspace(-10,10,1000)
